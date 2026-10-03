@@ -1,5 +1,5 @@
 import unittest
-from src.calculator import func1, func2, func3, func4
+from src.calculator import func1, func2, func3, func4, func5
 
 class TestCalculator(unittest.TestCase):
 
@@ -14,6 +14,13 @@ class TestCalculator(unittest.TestCase):
 
     def test_fun4(self):
         self.assertEqual(func4(2, 3), 10)
+
+    def test_fun5(self):
+        self.assertEqual(func5(10, 2), 5)
+
+    def test_fun5_zero_division(self):
+        with self.assertRaises(ZeroDivisionError):
+            func5(8, 0)
 
 if __name__ == '__main__':
     unittest.main()

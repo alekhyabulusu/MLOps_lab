@@ -12,3 +12,8 @@ def func4(x,y):
     answer2 = func2(x,y)    
     answer3 = func3(x,y)
     return answer1 + answer2 + answer3
+
+def func5(x,y):
+    if y == 0:
+        raise ZeroDivisionError("Cannot divide by zero.")
+    return x / y
